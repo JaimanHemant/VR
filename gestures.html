@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+
+       <!-- Bootstrap + Creative Studio main styles -->
+   	<link rel="stylesheet" href="assets/css/creative-studio.css">
+   	 <link rel="stylesheet" href="assets/css/templatemo-digimedia-v1.css">
+   	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <style>
+      /* Set the size of the map container */
+      #map {
+        height: 600px;
+        width: 100%;
+      }
+      /* Style the heading and subheading */
+      h1 {
+        font-size: 3em;
+        text-align: center;
+        margin-top: 1em;
+      }
+      h2 {
+        font-size: 2em;
+        margin-top: 1em;
+      }
+      /* Style the main content area */
+      main {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1em;
+      }
+      /* Style the navigation links */
+      nav {
+        text-align: center;
+        margin-top: 2em;
+      }
+      nav a {
+        display: inline-block;
+        margin: 0 1em;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 2px solid transparent;
+      }
+      nav a:hover {
+        border-bottom: 2px solid #333;
+      }
+       .swiper {
+           position: fixed;
+           top:180px;
+           width: 100%;
+           height: 500px;          
+           background-image: url(assets/images/services-left-dec.jpg);
+       }
+       
+       .swiper .portfolio-item:hover{
+         padding: 2px;
+         border: 4px solid #ff9999;
+       }
+
+       .swiper-slide {
+         text-align: center;
+         font-size: 18px;
+        
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+       }
+       
+       .thumbnail { 
+        top:-50px; 
+        left:-35px; 
+        display:block; 
+        z-index:999; 
+        cursor: pointer; 
+        -webkit-transition-property: all; 
+        -webkit-transition-duration: 0.3s; 
+        -webkit-transition-timing-function: ease; 
+        } 
+        
+        /*change the number below to scale to the appropriate size*/ 
+        .thumbnail:hover { 
+        transform: scale(0.8); 
+        
+        }
+
+    </style>
+  </head>
+  <body>
+     <main>
+     <div id="portfolio" class="our-portfolio section">
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-5">
+             <div class="section-heading" >
+               <h6>物件情報</h6>
+               <h4>自社 <em>物件</em></h4>
+               <div class="line-dec"></div>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+     <div class="swiper mySwiper" >
+       <div class="swiper-wrapper">
+         <div class="swiper-slide">
+         <div class="item">
+           <a href="https://spacely.co.jp/ambition/ns.kameido">
+             <div class="portfolio-item">
+             <div class="thumb">
+               <img src="assets/images/1.png" alt="">
+             </div>
+             <div class="overlay" >
+             <div class="overlay-infos">
+             <div class="down-content">
+               <h4>Nステージ亀戸　402</h4>
+               <span>賃料　：　8.00万</span><br>
+               <span>間取り　：　1K</span><br>
+               <span>専有面積　：　26.14m2</span><br>
+               <span>交通　：　JR中央・総武線</span>
+             </div>
+             </div>
+             </div>
+           </div>
+           </a>  
+         </div>
+        </div>
+        <div class="swiper-slide">
+        <div class="item">
+          <a href="https://spacely.co.jp/ambition/1484Rbandoubashi1">
+            <div class="portfolio-item">
+            <div class="thumb">
+              <img src="assets/images/2.png" alt="">
+            </div>
+            <div class="down-content">
+              <h4>ラフィスタ横浜阪東橋Ⅰ　201</h4>
+              <span>賃料　：　5.95万</span><br>
+              <span>間取り　：　1R</span><br>
+              <span>専有面積　：　21.28m2</span><br>
+              <span>交通　：　ブルーライン / 阪東橋</span>
+            </div>
+          </div>
+          </a>  
+        </div>
+       </div>
+       <div class="swiper-slide">
+       <div class="item">
+         <a href="https://spacely.co.jp/ambition/DwVpLJ7pVX">
+           <div class="portfolio-item">
+           <div class="thumb">
+             <img src="assets/images/3.png" alt="">
+           </div>
+           <div class="down-content">
+             <h4>ＦＯＲＴＩＳ大森　406</h4>
+             <span>賃料　：　7.9万</span><br>
+             <span>間取り　：　1K</span><br>
+             <span>専有面積　：　25.2m2</span><br>
+             <span>交通　：　京急本線 / 大森町</span>
+            </div>
+         </div>
+         </a>  
+       </div>
+      </div>
+      <div class="swiper-slide">
+      <div class="item">
+        <a href="https://spacely.co.jp/ambition/288">
+          <div class="portfolio-item">
+          <div class="thumb">
+            <img src="assets/images/4.png" alt="">
+          </div>
+          <div class="down-content">
+            <h4>ARTESSIMO LINK BE'RIS　502</h4>
+            <span>賃料　：　7.45万</span><br>
+            <span>間取り　：　1K</span><br>
+            <span>専有面積　：　20.13m2</span><br>
+            <span>交通　：　JR埼京線 / 板橋</span>
+          </div>
+        </div>
+        </a>  
+      </div>
+     </div>
+ <div class="swiper-slide">
+ <div class="item">
+   <a href="https://spacely.co.jp/ambition/p.rokucho1">
+     <div class="portfolio-item">
+     <div class="thumb">
+       <img src="assets/images/5.png" alt="">
+     </div>
+     <div class="down-content">
+       <h4>ペアパレス六町1号館　203</h4>
+        <span>賃料　：　7.25万</span><br>
+        <span>間取り　：　1DK</span><br>
+        <span>専有面積　：　25.23m2</span><br>
+        <span>交通　：　つくばエクスプレス / 六町</span>
+     </div>
+   </div>
+   </a>  
+ </div>
+</div>
+<div class="swiper-slide">
+ <div class="item">
+   <a href="https://spacely.co.jp/ambition/2208Rsumida5chome2">
+     <div class="portfolio-item">
+     <div class="thumb">
+       <img src="assets/images/6.png" alt="">
+     </div>
+     <div class="down-content">
+       <h4>ラフィスタ墨田5丁目Ⅱ　109</h4>
+        <span>賃料　：　7.9万</span><br>
+        <span>間取り　：　1DK</span><br>
+        <span>専有面積　：　25.93m2</span><br>
+        <span>交通　：　東武伊勢崎線 / 鐘ヶ淵</span>
+     </div>
+   </div>
+   </a>  
+ </div>
+</div>    
+<div class="swiper-slide">
+ <div class="item">
+   <a href="https://spacely.co.jp/ambition/raffistar.itabashihoncho">
+     <div class="portfolio-item">
+     <div class="thumb">
+       <img src="assets/images/7.png" alt="">
+     </div>
+     <div class="down-content">
+       <h4>ラフィスタ板橋本町　503</h4>
+        <span>賃料　：　9.4万</span><br>
+        <span>間取り　：　2K</span><br>
+        <span>専有面積　：　25.5m2</span><br>
+        <span>交通　：　都営三田線 / 板橋本町</span>
+     </div>
+   </div>
+   </a>  
+ </div>
+</div>  
+<div class="swiper-slide">
+ <div class="item">
+   <a href="https://spacely.co.jp/ambition/c.j.toranomon">
+     <div class="portfolio-item">
+     <div class="thumb">
+       <img src="assets/images/8.png" alt="">
+     </div>
+     <div class="down-content">
+       <h4>セジョリ虎ノ門　902</h4>
+        <span>賃料　：　14.95万</span><br>
+        <span>間取り　：　1K</span><br>
+        <span>専有面積　：　29.56m2</span><br>
+        <span>交通　：　東京メトロ日比谷線 / 神谷町</span>
+     </div>
+   </div>
+   </a>  
+ </div>
+</div>  
+<div class="swiper-slide">
+ <div class="item">
+   <a href="https://spacely.co.jp/ambition/2211Rmachida">
+     <div class="portfolio-item">
+     <div class="thumb">
+       <img src="assets/images/9.png" alt="">
+     </div>
+     <div class="down-content">
+       <h4>ラフィスタ町田　704</h4>
+        <span>賃料　：　8.15万</span><br>
+        <span>間取り　：　1DK</span><br>
+        <span>専有面積　：　26.00m2</span><br>
+        <span>交通　：　JR横浜線 / 町田</span>
+     </div>
+   </div>
+   </a>  
+ </div>
+</div>  
+<div class="swiper-slide">
+ <div class="item">
+   <a href="https://spacely.co.jp/ambition/438">
+     <div class="portfolio-item">
+     <div class="thumb">
+       <img src="assets/images/10.png" alt="">
+     </div>
+     <div class="down-content">
+       <h4>ＰＲＥＭＩＵＭ ＣＵＢＥ菊川　306</h4>
+        <span>賃料　：　8.75万</span><br>
+        <span>間取り　：　1R</span><br>
+        <span>専有面積　：　25.31m2</span><br>
+        <span>交通　：　都営新宿線 / 菊川</span>
+     </div>
+   </div>
+   </a>  
+ </div>
+</div>  
+   </div>
+   <br>
+ <!--  <div class="swiper-pagination"></div>-->
+   </div>
+       </div>
+       
+     </div>
+     
+     <br><br><br>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>    
+     </main>
+
+     <footer>
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-12">
+             <p>Ambition DX Holdings
+             
+           </div>
+         </div>
+       </div>
+       
+     </footer>
+    <script>
+
+      
+      <!-- Initialize Swiper -->
+        var swiper = new Swiper(".mySwiper", {
+          mousewheel: true,
+          loop: true,
+          slidesPerView: 4,
+          spaceBetween: -100,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+ 
+    </script>
+    
+    
+    
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI3OdAQdROjX8-v9iO19YfEpEZXOzGSIM&callback=initMap"></script>-->
+  </body>
+</html>
+
+
+
